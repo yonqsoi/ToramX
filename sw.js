@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toramx-v1';
+const CACHE_NAME = 'toramx-v2'; // Increment this when you change code
 const ASSETS = [
   'index.html',
   'style.css',
@@ -6,8 +6,8 @@ const ASSETS = [
   'manifest.json'
 ];
 
-// Install and Cache Assets
 self.addEventListener('install', (event) => {
+  self.skipWaiting(); // Force the new service worker to become active immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS);
@@ -15,12 +15,16 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activation logic
 self.addEventListener('activate', (event) => {
-  event.waitUntil(clients.claim());
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+      );
+    })
+  );
 });
 
-// Fetch logic
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
@@ -29,7 +33,6 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Handle SKIP_WAITING for updates
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();

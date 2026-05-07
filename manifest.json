@@ -4,19 +4,15 @@
   "description": "Premium Social Hub for Toram Online",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0f0f0f",
-  "theme_color": "#d4af37",
+  "background_color": "#050505",
+  "theme_color": "#ffcc00",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192/d4af37/ffffff?text=X",
+      "src": "https://cdn-icons-png.flaticon.com/512/732/732228.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "https://via.placeholder.com/512/d4af37/ffffff?text=ToramX",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ]
 }
