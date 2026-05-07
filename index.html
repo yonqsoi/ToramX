@@ -6,49 +6,57 @@
   <title>ToramX</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
-  <!-- Material Icons for that premium feel -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-  <!-- PWA Update Banner (Hidden by default) -->
+  <!-- Premium Notification Banner -->
   <div id="update-banner" class="update-banner">
-    <p>New version of ToramX is ready!</p>
+    <p>A new version is available</p>
     <button id="update-btn">Update Now</button>
   </div>
 
-  <!-- Header Section: Gamification / Status -->
   <header class="app-header">
     <div class="logo">Toram<span>X</span></div>
     <div class="user-status">
       <span class="rank">Adventurer</span>
-      <span class="points"><i class="material-icons">stars</i> 1,250</span>
+      <div class="points"><i class="material-icons">stars</i> 1,250</div>
     </div>
   </header>
 
-  <!-- Main Content Areas -->
   <main id="app-content">
     <section id="feed" class="view active">
-      <div class="placeholder-card">Feed: Toram Content Only</div>
+      <div class="placeholder-card">
+        <h3>Community Feed</h3>
+        <p>Your Toram Online social world starts here.</p>
+      </div>
     </section>
     
     <section id="lfp" class="view">
-      <div class="placeholder-card">Looking For Party (LFP)</div>
+      <div class="placeholder-card">
+        <h3>Looking For Party</h3>
+        <p>Find teammates for your next boss raid.</p>
+      </div>
     </section>
 
     <section id="trade" class="view">
-      <div class="placeholder-card">Marketplace: Buy / Sell</div>
+      <div class="placeholder-card">
+        <h3>Toram Marketplace</h3>
+        <p>Secure trading and price checks.</p>
+      </div>
     </section>
 
     <section id="profile" class="view">
-      <div class="placeholder-card">User Profile & Settings</div>
+      <div class="placeholder-card">
+        <h3>User Profile</h3>
+        <p>Rank up to unlock premium badges.</p>
+      </div>
     </section>
   </main>
 
-  <!-- Bottom Navigation -->
   <nav class="bottom-nav">
     <div class="nav-item active" data-view="feed">
-      <i class="material-icons">home</i>
+      <i class="material-icons">explore</i>
       <span>Feed</span>
     </div>
     <div class="nav-item" data-view="lfp">
@@ -56,11 +64,11 @@
       <span>LFP</span>
     </div>
     <div class="nav-item" data-view="trade">
-      <i class="material-icons">storefront</i>
+      <i class="material-icons">account_balance</i>
       <span>Trade</span>
     </div>
     <div class="nav-item" data-view="profile">
-      <i class="material-icons">person</i>
+      <i class="material-icons">account_circle</i>
       <span>Profile</span>
     </div>
   </nav>
