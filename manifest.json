@@ -1,21 +1,22 @@
 {
   "name": "ToramX Social Hub",
   "short_name": "ToramX",
-  "description": "The exclusive social network and marketplace for Toram Online.",
-  "start_url": "/index.html",
+  "description": "Premium Social Hub for Toram Online",
+  "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#1e1e1e",
+  "background_color": "#0f0f0f",
+  "theme_color": "#d4af37",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192/1e1e1e/ffffff?text=TX",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "https://via.placeholder.com/192/d4af37/ffffff?text=X",
+      "type": "image/png",
+      "sizes": "192x192"
     },
     {
-      "src": "https://via.placeholder.com/512/1e1e1e/ffffff?text=TX",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "https://via.placeholder.com/512/d4af37/ffffff?text=ToramX",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }

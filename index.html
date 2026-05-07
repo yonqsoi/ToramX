@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ToramX</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#1e1e1e">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ToramX</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <!-- Material Icons for that premium feel -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-    <header class="app-header">
-        <h1>ToramX</h1>
-        <div class="user-points">Rank: D | 150 Pts</div>
-    </header>
+  <!-- PWA Update Banner (Hidden by default) -->
+  <div id="update-banner" class="update-banner">
+    <p>New version of ToramX is ready!</p>
+    <button id="update-btn">Update Now</button>
+  </div>
 
-    <div id="update-banner" class="update-banner hidden">
-        <p>A new version of ToramX is available!</p>
-        <button id="update-btn" class="btn-primary">Update Now</button>
+  <!-- Header Section: Gamification / Status -->
+  <header class="app-header">
+    <div class="logo">Toram<span>X</span></div>
+    <div class="user-status">
+      <span class="rank">Adventurer</span>
+      <span class="points"><i class="material-icons">stars</i> 1,250</span>
     </div>
+  </header>
 
-    <main id="app-content">
-        <section id="view-feed" class="view active">
-            <div class="post-card">
-                <div class="post-header">
-                    <span class="username">@HalberdMain</span>
-                </div>
-                <div class="post-body">
-                    <p>Just hit level 278! Lilicarolla farm was intense today. ⚔️</p>
-                </div>
-                <div class="post-actions">
-                    <button>Like</button>
-                    <button>Comment</button>
-                    <button>Share</button>
-                </div>
-            </div>
-        </section>
+  <!-- Main Content Areas -->
+  <main id="app-content">
+    <section id="feed" class="view active">
+      <div class="placeholder-card">Feed: Toram Content Only</div>
+    </section>
+    
+    <section id="lfp" class="view">
+      <div class="placeholder-card">Looking For Party (LFP)</div>
+    </section>
 
-        <section id="view-lfp" class="view hidden">
-            <h2>Looking For Party</h2>
-            <p>Party finder board goes here.</p>
-        </section>
+    <section id="trade" class="view">
+      <div class="placeholder-card">Marketplace: Buy / Sell</div>
+    </section>
 
-        <section id="view-trade" class="view hidden">
-            <h2>Marketplace</h2>
-            <p>Buy/Sell listings go here.</p>
-        </section>
+    <section id="profile" class="view">
+      <div class="placeholder-card">User Profile & Settings</div>
+    </section>
+  </main>
 
-        <section id="view-profile" class="view hidden">
-            <h2>My Profile</h2>
-            <p>Profile stats, moderation tools, and settings go here.</p>
-        </section>
-    </main>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <div class="nav-item active" data-view="feed">
+      <i class="material-icons">home</i>
+      <span>Feed</span>
+    </div>
+    <div class="nav-item" data-view="lfp">
+      <i class="material-icons">groups</i>
+      <span>LFP</span>
+    </div>
+    <div class="nav-item" data-view="trade">
+      <i class="material-icons">storefront</i>
+      <span>Trade</span>
+    </div>
+    <div class="nav-item" data-view="profile">
+      <i class="material-icons">person</i>
+      <span>Profile</span>
+    </div>
+  </nav>
 
-    <nav class="bottom-nav">
-        <button class="nav-item active" data-target="view-feed">Feed</button>
-        <button class="nav-item" data-target="view-lfp">LFP</button>
-        <button class="nav-item" data-target="view-trade">Trade</button>
-        <button class="nav-item" data-target="view-profile">Profile</button>
-    </nav>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
