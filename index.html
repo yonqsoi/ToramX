@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ToramX</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#1e1e1e">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>ToramX</h1>
+        <div class="user-points">Rank: D | 150 Pts</div>
+    </header>
+
+    <div id="update-banner" class="update-banner hidden">
+        <p>A new version of ToramX is available!</p>
+        <button id="update-btn" class="btn-primary">Update Now</button>
+    </div>
+
+    <main id="app-content">
+        <section id="view-feed" class="view active">
+            <div class="post-card">
+                <div class="post-header">
+                    <span class="username">@HalberdMain</span>
+                </div>
+                <div class="post-body">
+                    <p>Just hit level 278! Lilicarolla farm was intense today. ⚔️</p>
+                </div>
+                <div class="post-actions">
+                    <button>Like</button>
+                    <button>Comment</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-lfp" class="view hidden">
+            <h2>Looking For Party</h2>
+            <p>Party finder board goes here.</p>
+        </section>
+
+        <section id="view-trade" class="view hidden">
+            <h2>Marketplace</h2>
+            <p>Buy/Sell listings go here.</p>
+        </section>
+
+        <section id="view-profile" class="view hidden">
+            <h2>My Profile</h2>
+            <p>Profile stats, moderation tools, and settings go here.</p>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-target="view-feed">Feed</button>
+        <button class="nav-item" data-target="view-lfp">LFP</button>
+        <button class="nav-item" data-target="view-trade">Trade</button>
+        <button class="nav-item" data-target="view-profile">Profile</button>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
